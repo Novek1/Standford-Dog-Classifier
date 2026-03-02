@@ -1,0 +1,173 @@
+/* ============================
+   Full-screen background with local dog image
+============================ */
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: url('./assets/photo-1457144759132-40d119c2f120.avif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Overlay to darken background for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    z-index: -1;
+}
+
+/* ============================
+   Main container
+============================ */
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    /* semi-transparent card */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    margin: 40px auto;
+    text-align: center;
+    /* center all text inside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* ============================
+   Title
+============================ */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #fefeff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============================
+   Portfolio section
+============================ */
+.portfolio {
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.portfolio ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+/* ============================
+   Upload section
+============================ */
+.upload-section {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================
+   File input
+============================ */
+input[type="file"] {
+    display: block;
+    /* allows margin auto */
+    margin: 20px auto 0;
+    /* top margin 20px, centered horizontally */
+    color: white;
+}
+
+/* ============================
+   Buttons
+============================ */
+button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(167, 139, 250, 0.5);
+}
+
+/* ============================
+   Image preview
+============================ */
+img {
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================
+   Prediction result
+============================ */
+.prediction-result {
+    margin-top: 20px;
+    color: white;
+    /* ensure text is visible */
+    opacity: 0.95;
+    line-height: 1.6;
+    text-align: center;
+    /* center text */
+}
+
+/* ============================
+   Links
+============================ */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
