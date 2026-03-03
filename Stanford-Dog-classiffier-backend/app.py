@@ -22,10 +22,13 @@ app.add_middleware(
 )
 
 # Load model once at startup
-model = load_model("dog_classifier_model.keras")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "dog_classifier_model.keras")
+
+model = load_model(MODEL_PATH)
 
 # Load class names once at startup
-with open("clean_class_names.json") as f:
+with open(os.path.join(BASE_DIR, "clean_class_names.json")) as f:
     clean_class_names = json.load(f)
 
 
