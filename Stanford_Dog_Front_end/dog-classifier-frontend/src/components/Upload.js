@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import architecture from "./assets/architecture.png";
-
+import architecture from "../assets/architecture.png";
 function Upload() {
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState(null);
