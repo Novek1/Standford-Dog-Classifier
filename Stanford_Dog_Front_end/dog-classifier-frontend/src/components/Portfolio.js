@@ -6,21 +6,24 @@ function Portfolio() {
             <h2>About this Project</h2>
 
             <p>
-                This is an end-to-end Machine Learning project I, Kevon Bvunza, built to demonstrate the deployment of a deep learning model.
-                I fine-tuned a MobileNetV2 Convolutional Neural Network on the Stanford Dogs Dataset to accurately classify dog breeds from images.
-                The project showcases my skills in model training, deployment with FastAPI, and building a responsive React frontend,
-                delivering a full-stack Machine Learning application.
+                This is an end-to-end Machine Learning project I built to demonstrate production deployment of a deep learning model.
+
+                I fine-tuned <strong> MobileNetV2 </strong> on the Stanford Dogs dataset to classify dog breeds from images. The trained model is deployed through a strong <strong>FastAPI</strong> backend hosted on strong Render, with a responsive <strong>React</strong> frontend deployed on Netlify.
+
+                The application allows users to upload an image and receive real-time breed predictions through a REST API pipeline.
 
 
             </p>
 
 
-            <p>Built using:</p>
+            <p>Tech stack:</p>
             <ul>
                 <li>TensorFlow / Keras</li>
-                <li>FastAPI backend</li>
-                <li>React frontend</li>
-                <li>Python & JavaScript</li>
+                <li>Python (model training + API)</li>
+                <li>FastAPI (backend inference service)</li>
+                <li>React (frontend UI)</li>
+                <li>Render (backend hosting)</li>
+                <li>Netlify (frontend hosting)</li>
             </ul>
             <p>
                 Dataset Used:{" "}
