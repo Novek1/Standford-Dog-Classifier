@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import architecture from "./assets/architecture.png";
 
 function Upload() {
     const [file, setFile] = useState(null);
@@ -48,30 +49,48 @@ function Upload() {
         };
     }, [preview]);
 
-    return (
-        <div className="upload-section">
-            <input type="file" onChange={handleFileChange} />
+return (
+    <div className="upload-section">
+        <input type="file" onChange={handleFileChange} />
 
-            {preview && <img src={preview} alt="preview" width="300" />}
+        {preview && <img src={preview} alt="preview" width="300" />}
 
-            <button onClick={handleUpload}>Predict Breed</button>
+        <button onClick={handleUpload}>Predict Breed</button>
 
-            {loading && <p>Predicting...</p>}
+        {loading && <p>Predicting...</p>}
 
-            {result && (
-                <div className="prediction-result">
-                    {result.success ? (
-                        <>
-                            <h3>The image shows a {result.breed}</h3>
-                            <p>Confidence: {result.confidence}</p>
-                        </>
-                    ) : (
-                        <p>{result.message}</p>
-                    )}
-                </div>
-            )}
+        {result && (
+            <div className="prediction-result">
+                {result.success ? (
+                    <>
+                        <h3>The image shows a {result.breed}</h3>
+                        <p>Confidence: {result.confidence}</p>
+                    </>
+                ) : (
+                    <p>{result.message}</p>
+                )}
+            </div>
+        )}
+
+
+        <div style={{ marginTop: "40px" }}>
+            <h2>System Architecture</h2>
+            <img
+                src={architecture}
+                alt="System Architecture Diagram"
+                style={{
+                    maxWidth: "100%",
+                    borderRadius: "10px",
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
+                }}
+            />
         </div>
-    );
+    </div>
+);
 }
+
+
+
+
 
 export default Upload;

@@ -71,4 +71,6 @@ async def predict_image(file: UploadFile = File(...)):
     }
 
 
+
+
 # use , python -m uvicorn app:app --reload , in the terminal to run
